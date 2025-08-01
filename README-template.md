@@ -19,6 +19,8 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+Social Links Profile is a challenge in which you have to create a landing page containing links to a person's various social networks.
+This landing page is created entirely using HTML5 and CSS3. It is responsive to different screen sizes.
 
 ### The challenge
 

@@ -16,8 +16,6 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 Social Links Profile is a challenge in which you have to create a landing page containing links to a person's various social networks.
 This landing page is created entirely using HTML5 and CSS3. It is responsive to different screen sizes.
@@ -36,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/sdmatias)
-- Live Site URL: [Add live site URL here](https://sdmatias.github.io/social-links-profile-main/)
+- Solution URL: [GitHub repository](https://github.com/sdmatias)
+- Live Site URL: [Live site](https://sdmatias.github.io/social-links-profile-main/)
 
 ## My process
 

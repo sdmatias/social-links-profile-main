@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Galería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <img src="Imagenes/PositivoV1.png" alt="Logo de la marca" class="logo">
+            <ul class="nav-links">
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#sobre-mi">Sobre Mi</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Matías Miguel Ojeda</h1>
+            <h2>Data Entry & Especialista en Procesamiento de Datos</h2>
+        </div>
+
+        <!-- Proyectos y Experiencia -->
+        <section id="galeria" class="content-section active projects">
+            <h3>Proyectos y Experiencia</h3>
+            <div class="card-container">
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <div class="card-body">
+                        <h4>Limpieza y Estructuración de Datos</h4>
+                        <p>Procesamiento de grandes volúmenes de datos para análisis y reportes.</p>
+                        <span class="tag">Excel</span>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="card">
+                    <div class="card-body">
+                        <h4>Digitalización y Catalogación de Documentos</h4>
+                        <p>Conversión de documentos físicos a formato digital y organización sistemática.</p>
+                        <span class="tag">Data Entry</span>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card">
+                    <div class="card-body">
+                        <h4>Dashboard & Reportes</h4>
+                        <p>Creación de dashboards interactivos y reportes periódicos para análisis de datos.</p>
+                        <span class="tag">Power BI</span>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4 -->
+                <article class="card">
+                    <div class="card-body">
+                        <h4>HTML</h4>
+                        <p>Desarrollo de páginas web y estructura de contenido para análisis de datos.</p>
+                        <span class="tag">HTML</span>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5 -->
+                <article class="card">
+                    <div class="card-body">
+                        <h4>CSS</h4>
+                        <p>Diseño y maquetación de páginas web para la presentación de datos.</p>
+                        <span class="tag">CSS</span>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 6 -->
+                <article class="card">
+                    <div class="card-body">
+                        <h4>JavaScript</h4>
+                        <p>Desarrollo de funcionalidades dinámicas e interactivas para aplicaciones web.</p>
+                        <span class="tag">JavaScript</span>
+                    </div>
+            </div>
+            </article>
+            </div>
+        </section>
+
+        <!-- Sobre Mi -->
+        <section id="sobre-mi" class="content-section about">
+            <div class="about-container">
+                <h3>Sobre Mi</h3>
+                <p>Soy un especialista con experiencia en la gestión y procesamiento de datos, especializado en la
+                    digitalización y estructuración de información para facilitar la toma de decisiones. Mi objetivo es
+                    optimizar procesos mediante el uso eficiente de herramientas tecnológicas.</p>
+
+                <div class="skills">
+                    <h4>Habilidades Técnicas</h4>
+                    <ul>
+                        <li>Excel Avanzado</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Power BI</li>
+                        <li>SQL Básico</li>
+                        <li>Digitalización de Documentos</li>
+                        <li>Gestión de Bases de Datos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="content-section contact">
+            <div class="contact-container">
+                <h3>Contacto</h3>
+                <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico o completar el
+                    formulario
+                    a continuación:</p>
+
+                <form action="#" method="post" class="contact-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
+            </div>
+    </main>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-links li a');
+        const sections = document.querySelectorAll('.content-section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); //Evita el salto por defecto del ancla #
+
+                // 1. Obtener el ID de la sección a mostrar
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                // 2. Ocultar todas las secciones 
+                sections.forEach(section => section.classList.remove('active'));
+                targetSection.classList.add('active');
+
+                //3. Mostrar la sección seleccionada
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
